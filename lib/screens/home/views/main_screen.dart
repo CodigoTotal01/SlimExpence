@@ -230,7 +230,7 @@ class MainScreen extends StatelessWidget {
             const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
-                  itemCount: 34,
+                  itemCount: 10,
                   itemBuilder: (context, int i) {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 16.0),
@@ -253,12 +253,12 @@ class MainScreen extends StatelessWidget {
                                         width: 50,
                                         height: 50,
                                         decoration: BoxDecoration(
-                                            color: Color(expenses[i].category.color),
+                                            color: Colors.red,
                                             shape: BoxShape.circle
                                         ),
                                       ),
                                       Image.asset(
-                                        'assets/${expenses[i].category.icon}.png',
+                                        'assets/food.png',
                                         scale: 2,
                                         color: Colors.white,
                                       )
@@ -266,7 +266,7 @@ class MainScreen extends StatelessWidget {
                                   ),
                                   const SizedBox(width: 12),
                                   Text(
-                                    expenses[i].category.name,
+                                    "categoria ejemplo",
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Theme.of(context).colorScheme.onBackground,
@@ -279,7 +279,7 @@ class MainScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Text(
-                                    "\$${expenses[i].amount}.00",
+                                    "\$100.00",
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Theme.of(context).colorScheme.onBackground,
@@ -287,7 +287,8 @@ class MainScreen extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    DateFormat('dd/MM/yyyy').format(expenses[i].date),
+
+                                    DateFormat('dd/MM/yyyy').format(DateTime(2024, 7, 1)),
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Theme.of(context).colorScheme.outline,
